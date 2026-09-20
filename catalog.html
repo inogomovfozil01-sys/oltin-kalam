@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru" class="scroll-smooth">
+<html lang="uz" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог — Oltin Qalam</title>
+  <meta name="referrer" content="no-referrer">
+  <title>Mualliflar — Oltin Qalam</title>
+  
+  <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- AOS CSS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body id="top" class="min-h-screen flex flex-col bg-white text-stone-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
+<body id="top" class="min-h-screen flex flex-col bg-[#FAF8F5] text-stone-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
 
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
+  <!-- НАВИГАЦИЯ -->
+  <nav class="sticky top-0 z-50 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200/80 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg p-1" title="На главную">
+        <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg p-1" title="Bosh sahifa">
           <div class="w-11 h-11 bg-[#1C1917] rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
             <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.4 4.6a2 2 0 0 0-2.8 0l-1.9 1.9 2.8 2.8 1.9-1.9a2 2 0 0 0 0-2.8Z" fill="#F59E0B"/>
@@ -27,80 +34,1068 @@
         </a>
 
         <div class="hidden md:flex items-center gap-6 lg:gap-8 text-[15px] font-medium text-stone-700">
-          <a href="catalog.html" class="hover:text-amber-800 transition-colors py-1">Каталог</a>
-          <a href="authors.html" class="hover:text-amber-800 transition-colors py-1">Авторы</a>
-          <a href="publishers.html" class="hover:text-amber-800 transition-colors py-1">Издательство</a>
-          <a href="articles.html" class="hover:text-amber-800 transition-colors py-1">Статьи</a>
-          <a href="contacts.html" class="hover:text-amber-800 transition-colors py-1">Контакты</a>
-          <a href="appeal.html" class="hover:text-amber-800 transition-colors py-1">Обращение</a>
+          <a href="catalog.html" class="hover:text-amber-800 transition-colors py-1">Katalog</a>
+          <a href="authors.html" class="text-amber-800 font-semibold transition-colors py-1 border-b-2 border-amber-600">Mualliflar</a>
+          <a href="publishers.html" class="hover:text-amber-800 transition-colors py-1">Nashriyotlar</a>
+          <a href="articles.html" class="hover:text-amber-800 transition-colors py-1">Maqolalar</a>
+          <a href="contacts.html" class="hover:text-amber-800 transition-colors py-1">Aloqa</a>
+          <a href="appeal.html" class="hover:text-amber-800 transition-colors py-1">Murojaat</a>
         </div>
 
         <div class="flex items-center gap-3 sm:gap-4 text-stone-700">
-          <button type="button" aria-label="Поиск" class="p-2 rounded-full hover:bg-stone-100 hover:text-stone-900 transition-colors">
+          <button type="button" aria-label="Qidiruv" class="p-2 rounded-full hover:bg-stone-200/60 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
               <circle cx="11" cy="11" r="7"></circle>
               <path stroke-linecap="round" d="m20 20-3.5-3.5"></path>
             </svg>
           </button>
 
-          <a href="#" aria-label="Избранное" class="p-2 rounded-full hover:bg-stone-100 hover:text-stone-900 transition-colors">
+          <a href="#" aria-label="Sevimlilar" class="p-2 rounded-full hover:bg-stone-200/60 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path>
             </svg>
           </a>
 
-          <a href="#" aria-label="Корзина" class="p-2 rounded-full hover:bg-stone-100 hover:text-stone-900 transition-colors">
+          <a href="#" aria-label="Savat" class="p-2 rounded-full hover:bg-stone-200/60 transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.19-.578-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007Z"></path>
             </svg>
           </a>
 
-          <button type="button" aria-label="Переключить тему" class="p-2 rounded-full hover:bg-stone-100 hover:text-stone-900 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"></path>
-            </svg>
-          </button>
-
-          <button type="button" aria-label="Сменить язык" class="p-2 rounded-full hover:bg-stone-100 hover:text-stone-900 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0c2.5 0 4.5-4.03 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4.03-4.5-9S9.5 3 12 3m-9 9h18"></path>
-            </svg>
-          </button>
-
-          <a href="#" class="hidden sm:inline-flex items-center justify-center px-5 py-1.5 text-sm font-medium text-stone-800 border border-stone-300 rounded-full hover:bg-stone-50 hover:border-stone-400 transition duration-200">
-            Войти
+          <a href="#" class="hidden sm:inline-flex items-center justify-center px-5 py-1.5 text-sm font-medium text-stone-800 border border-stone-300 rounded-full hover:bg-white transition duration-200">
+            Kirish
           </a>
-
-          <details class="md:hidden relative">
-            <summary class="list-none p-2 rounded-lg hover:bg-stone-100 cursor-pointer focus:outline-none">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </summary>
-            <div class="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-stone-200 py-3 px-2 flex flex-col gap-1 z-50">
-              <a href="catalog.html" class="px-3 py-2 rounded-lg hover:bg-stone-100 text-sm font-medium">Каталог</a>
-              <a href="authors.html" class="px-3 py-2 rounded-lg hover:bg-stone-100 text-sm font-medium">Авторы</a>
-              <a href="publishers.html" class="px-3 py-2 rounded-lg hover:bg-stone-100 text-sm font-medium">Издательство</a>
-              <a href="articles.html" class="px-3 py-2 rounded-lg hover:bg-stone-100 text-sm font-medium">Статьи</a>
-              <a href="contacts.html" class="px-3 py-2 rounded-lg hover:bg-stone-100 text-sm font-medium">Контакты</a>
-              <a href="appeal.html" class="px-3 py-2 rounded-lg hover:bg-stone-100 text-sm font-medium">Обращение</a>
-              <div class="border-t border-stone-100 my-1"></div>
-              <a href="#" class="px-3 py-2 text-center rounded-lg bg-stone-900 text-white text-sm font-medium">Войти</a>
-            </div>
-          </details>
         </div>
 
       </div>
     </div>
   </nav>
 
+  <!-- СЕТКА АВТОРОВ С AOS И ПРЯМЫМИ КАРТИНКАМИ -->
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 w-full">
+    
+    <!-- Поиск -->
+    <div class="mb-8" data-aos="fade-down" data-aos-duration="600">
+      <div class="relative w-full sm:w-80">
+        <span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-stone-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path stroke-linecap="round" d="m20 20-3.5-3.5"></path>
+          </svg>
+        </span>
+        <input 
+          type="search" 
+          placeholder="Muallif qidiruv..." 
+          class="w-full pl-10 pr-4 py-2 bg-[#FFFDF9] border border-stone-200 rounded-xl text-sm text-stone-800 placeholder-stone-400 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition"
+        >
+      </div>
+    </div>
+
+    <!-- Список всех авторов -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3.5 sm:gap-4">
+
+      <!-- 1. Abdulla Qahhor -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Abdulla_Qahhor.jpg/440px-Abdulla_Qahhor.jpg" alt="Abdulla Qahhor" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Abdulla Qahhor</h3>
+          <p class="text-xs text-stone-400 mt-1">1907-1968</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 2. Abdulla Qodiriy -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Abdulla_Qodiriy.jpg" alt="Abdulla Qodiriy" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Abdulla Qodiriy</h3>
+          <p class="text-xs text-stone-400 mt-1">1894-1938</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3. Aleksey Nikolayevich Tolstoy -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Aleksei_Nikolaevich_Tolstoi.jpg/440px-Aleksei_Nikolaevich_Tolstoi.jpg" alt="Aleksey Nikolayevich Tolstoy" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Aleksey Nikolayevich...</h3>
+          <p class="text-xs text-stone-400 mt-1">1883-1945</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. Aleksey Viktorovich Ivanov -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Alexey_Ivanov_Perm_2008.jpg/440px-Alexey_Ivanov_Perm_2008.jpg" alt="Aleksey Viktorovich Ivanov" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Aleksey Viktorovich...</h3>
+          <p class="text-xs text-stone-400 mt-1">1969</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 5. Alisher Navoiy -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Alisher_Navoi.jpg/440px-Alisher_Navoi.jpg" alt="Alisher Navoiy" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Alisher Navoiy</h3>
+          <p class="text-xs text-stone-400 mt-1">1441-1501</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6. Antuan De Sent-Ekzyuperi -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Antoine_de_Saint-Exup%C3%A9ry.jpg/440px-Antoine_de_Saint-Exup%C3%A9ry.jpg" alt="Antoine de Saint-Exupéry" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Antuan De Sent-...</h3>
+          <p class="text-xs text-stone-400 mt-1">1900-1944</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 7. Asqad Muxtor -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/2/23/Asqad_Muxtor.jpg/440px-Asqad_Muxtor.jpg" alt="Asqad Muxtor" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Asqad Muxtor</h3>
+          <p class="text-xs text-stone-400 mt-1">1920-1997</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 8. Astrid Lindgren -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Astrid_Lindgren_1960.jpg/440px-Astrid_Lindgren_1960.jpg" alt="Astrid Lindgren" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Astrid Lindgren</h3>
+          <p class="text-xs text-stone-400 mt-1">1907-2002</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 9. Barry J. Nalebuff -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Barry_Nalebuff.jpg/440px-Barry_Nalebuff.jpg" alt="Barry J. Nalebuff" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Barry J. Nalebuff</h3>
+          <p class="text-xs text-stone-400 mt-1">1958</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 10. Chingiz Aytmatov -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Chinghiz_Aitmatov_%281984%29.jpg/440px-Chinghiz_Aitmatov_%281984%29.jpg" alt="Chingiz Aytmatov" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Chingiz Aytmatov</h3>
+          <p class="text-xs text-stone-400 mt-1">1928-2008</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 11. Daniel Defo -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Daniel_Defoe_Kneller_Style.jpg/440px-Daniel_Defoe_Kneller_Style.jpg" alt="Daniel Defo" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Daniel Defo</h3>
+          <p class="text-xs text-stone-400 mt-1">1660-1731</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 12. Daniel Goleman -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Daniel_Goleman.jpg/440px-Daniel_Goleman.jpg" alt="Daniel Goleman" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Daniel Goleman</h3>
+          <p class="text-xs text-stone-400 mt-1">1946</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 13. Dennis W. Bakke -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Dennis_Bakke.jpg/440px-Dennis_Bakke.jpg" alt="Dennis W. Bakke" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Dennis W. Bakke</h3>
+          <p class="text-xs text-stone-400 mt-1">1946</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 14. Eliyahu M. Goldratt -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Eliyahu_M._Goldratt.jpg/440px-Eliyahu_M._Goldratt.jpg" alt="Eliyahu M. Goldratt" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Eliyahu M. Goldratt</h3>
+          <p class="text-xs text-stone-400 mt-1">1947-2011</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 15. Eric Ries -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Eric_Ries_%288339739726%29.jpg/440px-Eric_Ries_%288339739726%29.jpg" alt="Eric Ries" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Eric Ries (Erik Ris)</h3>
+          <p class="text-xs text-stone-400 mt-1">1978</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 16. Ernest Xeminguey -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/ErnestHemingway.jpg/440px-ErnestHemingway.jpg" alt="Ernest Hemingway" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Ernest Xeminguey</h3>
+          <p class="text-xs text-stone-400 mt-1">1899-1961</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 17. Frans Kafka -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kafka1906_cropped.jpg/440px-Kafka1906_cropped.jpg" alt="Franz Kafka" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Frans Kafka</h3>
+          <p class="text-xs text-stone-400 mt-1">1883-1924</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 18. G'afur G'ulom -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Gafur_Gulyam.jpg/440px-Gafur_Gulyam.jpg" alt="G'afur G'ulom" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">G'afur G'ulom</h3>
+          <p class="text-xs text-stone-400 mt-1">1903-1966</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 19. Genrix Saulovich Altshuller -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Altshuller.jpg/440px-Altshuller.jpg" alt="Genrix Saulovich Altshuller" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Genrix Saulovich...</h3>
+          <p class="text-xs text-stone-400 mt-1">1926-1998</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 20. Hakan Mengüç -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Hakan_Meng%C3%BC%C3%A7.jpg/440px-Hakan_Meng%C3%BC%C3%A7.jpg" alt="Hakan Mengüç" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Hakan Mengüç</h3>
+          <p class="text-xs text-stone-400 mt-1">1987</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 21. Hans Kristian Andersen -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Hans_Christian_Andersen_%281869%29_by_Thora_Hallager.jpg/440px-Hans_Christian_Andersen_%281869%29_by_Thora_Hallager.jpg" alt="Hans Christian Andersen" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 10 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Hans Kristian...</h3>
+          <p class="text-xs text-stone-400 mt-1">1805-1875</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 22. Isxak Kalderon Adizes -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ichak_Adizes_2011.jpg/440px-Ichak_Adizes_2011.jpg" alt="Ichak Adizes" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Isxak Kalderon Adizes</h3>
+          <p class="text-xs text-stone-400 mt-1">1937</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 23. Jek London -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Jack_London_young.jpg/440px-Jack_London_young.jpg" alt="Jack London" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Jek London</h3>
+          <p class="text-xs text-stone-400 mt-1">1876-1916</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 24. Joanne Rowling -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/440px-J._K._Rowling_2010.jpg" alt="J. K. Rowling" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 7 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Joanne Rowling</h3>
+          <p class="text-xs text-stone-400 mt-1">1965</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 25. Jon Bruks -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/John_Brooks_author.jpg/440px-John_Brooks_author.jpg" alt="John Brooks" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Jon Bruks (John...</h3>
+          <p class="text-xs text-stone-400 mt-1">1920-1993</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 26. Jon Ronald Reuel Tolkien -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/J._R._R._Tolkien%2C_ca._1925.jpg/440px-J._R._R._Tolkien%2C_ca._1925.jpg" alt="J. R. R. Tolkien" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Jon Ronald Reuel...</h3>
+          <p class="text-xs text-stone-400 mt-1">1892-1973</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 27. Jonatan Svift -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Jonathan_swift.jpg/440px-Jonathan_swift.jpg" alt="Jonathan Swift" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Jonatan Svift</h3>
+          <p class="text-xs text-stone-400 mt-1">1667-1745</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 28. Joseph Rudyard Kipling -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rudyard_Kipling_%28portrait%29.jpg/440px-Rudyard_Kipling_%28portrait%29.jpg" alt="Rudyard Kipling" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Joseph Rudyard...</h3>
+          <p class="text-xs text-stone-400 mt-1">1865-1936</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 29. Jyul Vern -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/F%C3%A9lix_Nadar_1820-1910_portraits_Jules_Verne.jpg/440px-F%C3%A9lix_Nadar_1820-1910_portraits_Jules_Verne.jpg" alt="Jules Verne" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 4 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Jyul Vern</h3>
+          <p class="text-xs text-stone-400 mt-1">1828-1905</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 30. Lev Tolstoy -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/L.N.Tolstoy_Prokudin-Gorsky.jpg/440px-L.N.Tolstoy_Prokudin-Gorsky.jpg" alt="Lev Tolstoy" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Lev Tolstoy</h3>
+          <p class="text-xs text-stone-400 mt-1">1828-1910</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 31. Maksim Kotin -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://alpinabook.ru/upload/resize_cache/iblock/bfa/350_480_1/bfa93435faae00f68dcce92b23a96ffc.jpg" alt="Maksim Kotin" class="w-16 h-16 rounded-full object-cover object-top" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&auto=format&fit=crop&q=80'">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Maksim Kotin</h3>
+          <p class="text-xs text-stone-400 mt-1">1980</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 32. Mark Tven -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Mark_Twain_by_AF_Bradley.jpg/440px-Mark_Twain_by_AF_Bradley.jpg" alt="Mark Twain" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 2 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Mark Tven</h3>
+          <p class="text-xs text-stone-400 mt-1">1835-1910</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 33. Mirkarim Osim -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/b/b3/Mirkarim_Osim.jpg/440px-Mirkarim_Osim.jpg" alt="Mirkarim Osim" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Mirkarim Osim</h3>
+          <p class="text-xs text-stone-400 mt-1">1907-1984</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 34. Mirzakalon Ismoiliy -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/2/22/Mirzakalon_Ismoiliy.jpg/440px-Mirzakalon_Ismoiliy.jpg" alt="Mirzakalon Ismoiliy" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Mirzakalon Ismoiliy</h3>
+          <p class="text-xs text-stone-400 mt-1">1908-1986</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 35. Nikolay Alekseyevich Ostrovskiy -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Nikolay_Ostrovsky_1936.jpg/440px-Nikolay_Ostrovsky_1936.jpg" alt="Nikolay Ostrovskiy" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Nikolay Alekseyevich...</h3>
+          <p class="text-xs text-stone-400 mt-1">1904-1936</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 36. Normurod Norqobilov -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/b/b5/Normurod_Norqobilov.jpg/440px-Normurod_Norqobilov.jpg" alt="Normurod Norqobilov" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Normurod Norqobilov</h3>
+          <p class="text-xs text-stone-400 mt-1">1965</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 37. Oltin Qalam -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <div class="w-16 h-16 rounded-full bg-[#EAB308] flex items-center justify-center text-white font-serif font-black text-xl shadow-xs border border-amber-300">
+                OQ
+              </div>
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 28 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Oltin Qalam</h3>
+          <p class="text-xs text-stone-400 mt-1">1900</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 38. Oybek -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Oybek_%28Musa_Tashmukhamedov%29.jpg/440px-Oybek_%28Musa_Tashmukhamedov%29.jpg" alt="Oybek" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 2 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Oybek</h3>
+          <p class="text-xs text-stone-400 mt-1">1905-1968</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 39. O'lmas Umarbekov -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/9/90/%D0%8E%D0%BB%D0%BC%D0%B0%D1%81_%D0%A3%D0%BC%D0%B0%D1%80%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2.jpg/440px-%D0%8E%D0%BB%D0%BC%D0%B0%D1%81_%D0%A3%D0%BC%D0%B0%D1%80%D0%B1%D0%B5%D0%BA%D0%BE%D0%B2.jpg" alt="O'lmas Umarbekov" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">O'lmas Umarbekov</h3>
+          <p class="text-xs text-stone-400 mt-1">1934-1994</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 40. O'tkir Hoshimov -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/6/6f/O%CA%BBtkir_Hoshimov.jpg/440px-O%CA%BBtkir_Hoshimov.jpg" alt="O'tkir Hoshimov" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">O'tkir Hoshimov</h3>
+          <p class="text-xs text-stone-400 mt-1">1941-2013</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 41. Pirimqul Qodirov -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/b/b3/Pirimqul_Qodirov.jpg/440px-Pirimqul_Qodirov.jpg" alt="Pirimqul Qodirov" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Pirimqul Qodirov</h3>
+          <p class="text-xs text-stone-400 mt-1">1928-2010</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 42. Radislav Gandapas -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Radislav_Gandapas.jpg/440px-Radislav_Gandapas.jpg" alt="Radislav Gandapas" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Radislav Ivanovich...</h3>
+          <p class="text-xs text-stone-400 mt-1">1967</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 43. Robert Kiyosaki -->
+      <div data-aos="fade-up" data-aos-delay="80" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Robert_Kiyosaki_by_Gage_Skidmore.jpg/440px-Robert_Kiyosaki_by_Gage_Skidmore.jpg" alt="Robert Kiyosaki" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Robert Toru Kiyosaki</h3>
+          <p class="text-xs text-stone-400 mt-1">1947</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 44. Said Ahmad -->
+      <div data-aos="fade-up" data-aos-delay="120" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/5/52/Said_Ahmad.jpg/440px-Said_Ahmad.jpg" alt="Said Ahmad" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 1 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Said Ahmad</h3>
+          <p class="text-xs text-stone-400 mt-1">1920-2007</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 45. Shayx Muhammad Sodiq Muhammad Yusuf -->
+      <div data-aos="fade-up" data-aos-delay="160" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Muhammad_Sodiq_Muhammad_Yusuf.jpg/440px-Muhammad_Sodiq_Muhammad_Yusuf.jpg" alt="Shayx Muhammad Sodiq" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Shayx Muhammad...</h3>
+          <p class="text-xs text-stone-400 mt-1">1952-2015</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 46. Xalq Og'zaki Ijodi -->
+      <div data-aos="fade-up" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <div class="w-16 h-16 rounded-full bg-[#F59E0B] flex items-center justify-center text-white font-serif font-black text-xl shadow-xs border border-amber-300">
+                XO
+              </div>
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 22 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Xalq Og'zaki Ijodi</h3>
+          <p class="text-xs text-stone-400 mt-1">1900</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 47. Xudoyberdi To'xtaboyev -->
+      <div data-aos="fade-up" data-aos-delay="40" class="bg-[#FFFDF9] border border-amber-100/90 rounded-2xl p-4 flex flex-col justify-between shadow-xs hover:shadow-md hover:border-amber-300 transition duration-300">
+        <div>
+          <div class="flex justify-start mb-3">
+            <div class="relative">
+              <img src="https://upload.wikimedia.org/wikipedia/uz/thumb/2/23/Xudoyberdi_To%CA%BBxtaboyev.jpg/440px-Xudoyberdi_To%CA%BBxtaboyev.jpg" alt="Xudoyberdi To'xtaboyev" class="w-16 h-16 rounded-full object-cover">
+              <div class="absolute -bottom-1 -right-7 bg-white/95 text-[10px] text-stone-600 px-2 py-0.5 rounded-full border border-stone-200 shadow-2xs flex items-center gap-1 font-medium">
+                <span class="text-amber-500 text-[10px]">📖</span> 0 ta kitob
+              </div>
+            </div>
+          </div>
+          <h3 class="font-serif font-bold text-stone-900 text-sm sm:text-base leading-tight mt-1 truncate">Xudoyberdi...</h3>
+          <p class="text-xs text-stone-400 mt-1">1932-2021</p>
+        </div>
+        <div class="mt-5 pt-2.5 border-t border-stone-100">
+          <a href="#" class="text-xs text-amber-500 hover:text-amber-600 font-medium inline-flex items-center gap-1 group">
+            Kitoblarni ko'rish <span class="group-hover:translate-x-0.5 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
   <footer class="bg-[#FAF7F2] border-t border-stone-200/60 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14">
         
         <div class="lg:col-span-4 space-y-4">
-          <a href="index.html" class="flex items-center gap-3.5 group inline-flex focus:outline-none" title="На главную">
+          <a href="index.html" class="flex items-center gap-3.5 group inline-flex focus:outline-none" title="Bosh sahifa">
             <div class="w-10 h-10 bg-[#1C1917] rounded-xl flex items-center justify-center shadow-xs">
               <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.4 4.6a2 2 0 0 0-2.8 0l-1.9 1.9 2.8 2.8 1.9-1.9a2 2 0 0 0 0-2.8Z" fill="#F59E0B"/>
@@ -116,41 +1111,41 @@
           
           <div class="space-y-1.5 text-sm text-stone-600 leading-relaxed pt-2">
             <p class="font-medium text-stone-800">Toshkent, Chilonzor kvartal G9a, 20-uy</p>
-            <p>Ориентир — Университет мировых языков</p>
-            <p class="text-stone-500">09:00-21:00</p>
+            <p>Mo‘ljal — Jahon tillari universiteti</p>
+            <p class="text-stone-500">09:00 - 21:00</p>
           </div>
         </div>
 
         <div class="lg:col-span-3">
           <h3 class="text-xs font-bold tracking-wider text-stone-800 uppercase mb-4">
-            СТРАНИЦЫ
+            SAHIFALAR
           </h3>
           <ul class="space-y-2.5 text-sm text-stone-600">
-            <li><a href="catalog.html" class="hover:text-amber-800 transition-colors">Каталог</a></li>
-            <li><a href="authors.html" class="hover:text-amber-800 transition-colors">Авторы</a></li>
-            <li><a href="publishers.html" class="hover:text-amber-800 transition-colors">Издательство</a></li>
-            <li><a href="articles.html" class="hover:text-amber-800 transition-colors">Статьи</a></li>
-            <li><a href="contacts.html" class="hover:text-amber-800 transition-colors">Контакты</a></li>
-            <li><a href="appeal.html" class="hover:text-amber-800 transition-colors">Обращение</a></li>
+            <li><a href="catalog.html" class="hover:text-amber-800 transition-colors">Katalog</a></li>
+            <li><a href="authors.html" class="hover:text-amber-800 transition-colors">Mualliflar</a></li>
+            <li><a href="publishers.html" class="hover:text-amber-800 transition-colors">Nashriyotlar</a></li>
+            <li><a href="articles.html" class="hover:text-amber-800 transition-colors">Maqolalar</a></li>
+            <li><a href="contacts.html" class="hover:text-amber-800 transition-colors">Aloqa</a></li>
+            <li><a href="appeal.html" class="hover:text-amber-800 transition-colors">Murojaat</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-3">
           <h3 class="text-xs font-bold tracking-wider text-stone-800 uppercase mb-4">
-            КАТЕГОРИИ
+            BO'LIMLAR
           </h3>
           <ul class="space-y-2.5 text-sm text-stone-600">
-            <li><a href="catalog.html?category=uzbek" class="hover:text-amber-800 transition-colors">Узбекская литература</a></li>
-            <li><a href="catalog.html?category=kids" class="hover:text-amber-800 transition-colors">Детская литература</a></li>
-            <li><a href="catalog.html?category=religious" class="hover:text-amber-800 transition-colors">Религиозная</a></li>
-            <li><a href="catalog.html?category=textbooks" class="hover:text-amber-800 transition-colors">Учебники</a></li>
-            <li><a href="catalog.html?category=science" class="hover:text-amber-800 transition-colors">Научная</a></li>
+            <li><a href="catalog.html?category=uzbek" class="hover:text-amber-800 transition-colors">O'zbek adabiyoti</a></li>
+            <li><a href="catalog.html?category=kids" class="hover:text-amber-800 transition-colors">Bolalar adabiyoti</a></li>
+            <li><a href="catalog.html?category=religious" class="hover:text-amber-800 transition-colors">Diniy adabiyot</a></li>
+            <li><a href="catalog.html?category=textbooks" class="hover:text-amber-800 transition-colors">Darsliklar</a></li>
+            <li><a href="catalog.html?category=science" class="hover:text-amber-800 transition-colors">Ilmiy adabiyot</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-2">
           <h3 class="text-xs font-bold tracking-wider text-stone-800 uppercase mb-4">
-            СОЦИАЛЬНЫЕ СЕТИ
+            IJTIMOIY TARMOQLAR
           </h3>
           <div class="flex flex-wrap items-center gap-2.5 text-stone-600">
             <a href="https://t.me" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="w-9 h-9 rounded-full bg-white border border-stone-200 flex items-center justify-center hover:text-amber-800 hover:border-amber-400 hover:shadow-xs transition">
@@ -180,9 +1175,9 @@
 
       <div class="border-t border-stone-200/80 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 relative">
         <p class="text-xs sm:text-sm text-stone-500 text-center w-full">
-          &copy; 2026 Oltin Qalam. Все права защищены.
+          &copy; 2026 Oltin Qalam. Barcha huquqlar himoyalangan.
         </p>
-        <a href="#top" aria-label="Наверх" title="Наверх" class="sm:absolute sm:right-0 sm:top-6 w-11 h-11 rounded-full bg-amber-400 hover:bg-amber-500 text-stone-900 flex items-center justify-center shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-amber-500">
+        <a href="#top" aria-label="Yuqoriga" title="Yuqoriga" class="sm:absolute sm:right-0 sm:top-6 w-11 h-11 rounded-full bg-amber-400 hover:bg-amber-500 text-stone-900 flex items-center justify-center shadow-md hover:shadow-lg transition-transform hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-amber-500">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"></path>
           </svg>
@@ -191,6 +1186,16 @@
 
     </div>
   </footer>
+
+  <!-- AOS Инициализация -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500,
+      easing: 'ease-out-cubic',
+      once: true
+    });
+  </script>
 
 </body>
 </html>
