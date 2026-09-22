@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
     .font-serif, .font-serif-custom {
@@ -22,13 +24,7 @@
       <div class="flex items-center justify-between h-20">
         
         <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 rounded-lg p-1" title="На главную">
-          <div class="w-11 h-11 bg-[#1C1917] rounded-xl flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-200">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19.4 4.6a2 2 0 0 0-2.8 0l-1.9 1.9 2.8 2.8 1.9-1.9a2 2 0 0 0 0-2.8Z" fill="#F59E0B"/>
-              <path d="M13.3 7.9 5.5 15.7a3 3 0 0 0-.8 1.5L4 20l2.8-.7a3 3 0 0 0 1.5-.8l7.8-7.8-2.8-2.8Z" fill="#FFFFFF"/>
-              <circle cx="9" cy="15" r="1" fill="#1C1917"/>
-            </svg>
-          </div>
+          <img src="logo.png" alt="Oltin Qalam" class="w-11 h-11 rounded-xl shadow-sm group-hover:scale-105 transition-transform duration-200 object-cover">
           <div class="flex flex-col leading-none">
             <span class="font-serif font-black text-xl tracking-tight text-[#1C1917]">Oltin</span>
             <span class="font-serif font-black text-xl tracking-tight text-[#1C1917]">Qalam</span>
@@ -126,7 +122,6 @@
 
 
 
-
   <!-- 1. KATEGORIYALAR QISMI (Xatosi to'g'irlangan) -->
     <section class="py-16 px-4 flex flex-col items-center">
         <!-- Sarlavha qismi (kartochkalar ustida joylashgan) -->
@@ -158,6 +153,19 @@
             </div>
             <div class="w-40 h-56 bg-[#a6a092] rounded-xl shadow-md flex items-center justify-center p-4 shrink-0 transition-transform hover:-translate-y-2 cursor-pointer">
                 <span class="text-white font-serif font-semibold text-center text-lg leading-tight">Biznes va<br>iqtisod</span>
+
+  <footer class="bg-[#FAF7F2] border-t border-stone-200/60 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14">
+        
+        <div class="lg:col-span-4 space-y-4">
+          <a href="index.html" class="flex items-center gap-3.5 group inline-flex focus:outline-none" title="На главную">
+            <img src="logo.png" alt="Oltin Qalam" class="w-10 h-10 rounded-xl shadow-xs object-cover">
+            <div class="flex flex-col leading-none">
+              <span class="font-serif font-black text-lg tracking-tight text-[#1C1917]">Oltin</span>
+              <span class="font-serif font-black text-lg tracking-tight text-[#1C1917]">Qalam</span>
+
             </div>
         </div>
     </section>
